@@ -31,13 +31,6 @@ public class LoginResponse implements Serializable {
         private Role role;
 
     }
-    @Getter
-    @Setter
-    @NoArgsConstructor
-    @AllArgsConstructor
-    public static class UserGetAccount {
-        private UserLogin user;
-    }
 
     @Getter
     @Setter

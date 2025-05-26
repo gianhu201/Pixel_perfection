@@ -4,9 +4,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=Pixel_perfection;encrypt=false
-    username: sa
-    password: 2001
+    url: jdbc:sqlserver://database-admin.database.windows.net:1433;database=Pixel_perfection;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30
+    username: pixelperfection-sqlserver@database-admin
+    password: YOUR_PASSWORD
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
   jpa:

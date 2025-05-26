@@ -70,6 +70,7 @@ public class AuthController {
                 .email(user.getEmail())
                 .userName(user.getUserName())
                 .name(user.getName())
+                .role(user.getRoles().stream().findFirst().orElse(null))
                 .build());
 
         String accessToken = securityUtil.createAccessToken(user.getUserName(), loginResponse);

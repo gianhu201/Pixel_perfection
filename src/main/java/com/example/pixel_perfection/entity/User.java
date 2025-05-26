@@ -1,6 +1,7 @@
 package com.example.pixel_perfection.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -41,12 +42,6 @@ public class User {
     @Column(length = 4000)
     String refreshToken;
 
-    @Column(name = "verification_code")
-    String verificationCode;
-    @Column(name = "verification_expiration")
-    LocalDateTime verificationCodeExpiresAt;
-    boolean enabled;
-
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -55,6 +50,7 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
 
+    @JsonBackReference
     private Set<Role> roles = new HashSet<>();
 
 }
