@@ -53,4 +53,4 @@ jobs:
           app-name: 'PixelPerfection'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E4475D2E89124C0DA7C18F2164EB8AE0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC614DA021E3483E940FE5AA4A2AAA0B }}
